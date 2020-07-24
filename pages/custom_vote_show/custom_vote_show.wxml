@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<!-- 定制投票展示 -->
+<view class="d-flex d-flex-column h-100">
+
+	<view class="text-center f-s-4 m-y-4" style="color:#3477FC;">技术部周六团建费用重哪里出？</view>
+
+	<view class="flex-1 scoll-y p-2" style="overflow-x: hidden;">
+
+    <view class="d-flex flex-wrap flex-between">
+
+      <view class="box" wx:for="{{[1,2,3]}}" wx:key="i" wx:for-index="i" wx:for-item="item">
+        <image class="img-c" src=""></image>
+        <view class="rs">支持人数：<text class="num">600</text>人</view>
+        <view class="wd" >地方够大 能K歌 酒水平价 味道不错 有特色菜</view>
+        <view class="text-center">
+          <image class="img" src="../../image/public/zan_1.png"></image>
+        </view>
+      </view>
+      
+    </view>
+
+	</view>
+
+	<!-- <view class="d-flex flex-center-x p-y-4">
+		<view class="btn-1">确认投票</view>
+	</view> -->
+
+  
+		<fixed-b-r>
+			<icon-1 src="/image/public/share.png">分享投票</icon-1>
+			<icon-1 src="/image/public/share.png">分享海报</icon-1>
+		</fixed-b-r>
+</view>

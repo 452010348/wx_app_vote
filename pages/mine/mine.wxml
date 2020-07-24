@@ -1,0 +1,37 @@
+<!--logs.wxml-->
+<view class="container">
+
+  <view class="d-flex p-3">
+    <view class="flex-1 p-r-3 d-flex d-flex-column flex-between">
+      <view style="font-size: 38rpx;font-weight: 900;">Mary母子</view>
+      <view class="flex-1 p-t-2 text-ellipsis-2" style="font-size: 25rpx;color:#999999;">是的撒dsa的撒旦的撒旦萨达阿什顿sadsad萨达的撒旦阿斯顿撒的撒旦萨达阿什顿撒的撒旦萨达的撒旦</view>
+    </view>
+    <image src="../../image/mine/default_head.png" style="width:140rpx;height:140rpx;"></image>
+  </view>
+
+
+  <view class="m-t-1">
+    <template is="cellList" data="{{url:'../my_chanyu/my_chanyu',text:'我的参与',icon:'../../image/mine/icon-my.png'}}" />
+    <template is="cellList" data="{{url:'../my_faqi/my_faqi',text:'我的发起',icon:'../../image/mine/icon-faqi.png'}}" />
+    <template is="cellList" data="{{url:'../my_dingdan/my_dingdan',text:'我的订单',icon:'../../image/mine/icon-order.png'}}" />
+    <template is="cellList" data="{{url:'../vote_list/vote_list',text:'意见反馈',icon:'../../image/mine/icon-idea.png'}}" />
+    
+    
+    <template is="cellList" data="{{url:'/pages/custom_vote/custom_vote',text:'定制投票',icon:'../../image/mine/icon-idea.png'}}" />
+    <template is="cellList" data="{{url:'/pages/custom_vote_show/custom_vote_show',text:'定制投票展示',icon:'../../image/mine/icon-idea.png'}}" />
+    
+    
+    
+    
+
+  </view>
+  
+</view>
+
+<template name="cellList">
+  <navigator url="{{url}}" class="d-flex flex-center-y p-3">
+    <image src="{{icon}}" style="width:50rpx;height:50rpx;"></image>
+    <view class="flex-1 p-x-2">{{text}}</view>
+    <image src="../../image/mine/btn-right.png" style="width:15rpx;height:30rpx;"></image>
+  </navigator>
+</template>

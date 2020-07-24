@@ -1,0 +1,128 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.3",
+	"appid": "wx1066b9505831ccd8",
+	"projectname": "woniu",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/vote_list/vote_list",
+					"pathName": "pages/vote_list/vote_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/vote_creat/vote_creat",
+					"pathName": "pages/vote_creat/vote_creat",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/vote_show/vote_show",
+					"pathName": "pages/vote_show/vote_show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/custom_vote/custom_vote",
+					"pathName": "pages/custom_vote/custom_vote",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/custom_vote_show/custom_vote_show",
+					"pathName": "pages/custom_vote_show/custom_vote_show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/idea_creat/idea_creat",
+					"pathName": "pages/idea_creat/idea_creat",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/idea_list/idea_list",
+					"pathName": "pages/idea_list/idea_list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/idea_details/idea_details",
+					"pathName": "pages/idea_details/idea_details",
+					"scene": null
+				}
+			]
+		}
+	}
+}

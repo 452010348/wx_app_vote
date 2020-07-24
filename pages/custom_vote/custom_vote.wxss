@@ -1,0 +1,13 @@
+
+page{
+  background:#EDF2F6;
+  height: 100%;
+}
+.img-box{
+  position: relative;
+  width: 150rpx;
+  height: 150rpx;
+  margin-bottom:20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}

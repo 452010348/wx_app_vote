@@ -1,0 +1,6 @@
+<!--components/icon-1/icon-1.wxml-->
+<!-- ../../image/public/share.png -->
+<view bind:tap="click" class="btn-round d-flex d-flex-column flex-center-x flex-center-y" style="background-image: url(/image/public/btn-white-round.png);">
+  <image src="{{src}}" style="width:26rpx;height:26rpx;"></image>
+  <text style="font-size: 18rpx;color:#333333;"><slot></slot></text>
+</view>

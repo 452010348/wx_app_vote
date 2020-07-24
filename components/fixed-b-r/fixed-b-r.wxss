@@ -1,0 +1,7 @@
+/* components/fixed-b-r.wxss */
+
+
+.fixed-b-r{
+  position: fixed;right: 40rpx;bottom:200rpx;
+  min-width: 40rpx;min-height: 40rpx;
+}

@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<!-- 意见箱列表 -->
+<view class="p-3">
+
+  <view class="d-flex flex-center-y m-b-4">
+    <view class="flex-1 p-r-3 f-s-3">先天一炁，简称炁。能够靠自身繁衍与 靠外力炼造，是生命与非生命的区别</view>
+    <view class="btn-du d-flex flex-center-x flex-center-y" style="background-image:url(../../image/public/btn-1.png);">已读</view>
+  </view>
+
+  <view class="d-flex flex-center-y m-b-4">
+    <view class="flex-1 p-r-3 f-s-3">先天一炁，简称炁。能够靠自身繁衍与 靠外力炼造，是生命与非生命的区别 靠外力炼造，是生命与非生命的区别</view>
+    <view class="btn-du d-flex flex-center-x flex-center-y" style="background-image:url(../../image/public/btn-2.png);">未读</view>
+  </view>
+
+</view>

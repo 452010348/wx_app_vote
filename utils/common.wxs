@@ -1,0 +1,245 @@
+//示例
+var fitNum=function fitNum(type,num) {
+    if(type=='1'){
+
+      return  num+"折" 
+    }else{
+      return  "￥"+num
+      // return  "¥: "+num
+    }
+}
+//判断时间是未开始还是已开始
+var fitTime=function fitTime(startTime,endTime) {
+    //
+    var start = startTime; //返回当前时间对象
+    var end = endTime; //返回当前时间对象
+    var now=getDate();
+    now=now.getTime();
+    if (now>start&&now<end) {
+    	return "距结束";
+    }else if(now<start&&now<end){
+      return '距开始';
+    }
+    else { 
+    	return false;
+    }
+ }
+
+ // 判断是否展示楼层
+ var fitEmpotyArr=function fitEmpotyArr(arr) {
+     var result=false; 
+     if (arr.length==0) {
+        return false;
+     }
+     for (var i = 0; i < arr.length; i++) {
+        if(arr[i].cbiStatus!=5){
+           result=true 
+        }
+     }
+     return result;
+}
+//判断还要多少小时结束
+var fitHour=function fitHour(startTime,endTime) {
+    //
+    var start = startTime; //返回当前时间对象
+    var end = endTime; //返回当前时间对象
+    var now=getDate();
+    now=now.getTime();
+    if (now>start) {
+       var num=end-now;
+       var hour= num/(1000*60*60);
+       if (hour<1) {
+          return '00';
+       }
+       hour=Math.floor(hour)
+	     // var hour=getDate(num);
+	     // hour=hour.getHours()+24*hour.getDay();
+		  if (hour<10) {
+		     	hour='0'+hour;
+		  }
+		  return hour;
+	    
+    }else{
+     var num=start-now;
+     var hour= num/(1000*60*60);
+      if (hour<1) {
+          return '00';
+       }
+      hour=Math.floor(hour)
+	   // var hour=getDate(num);
+	   // hour=hour.getHours()+24*hour.getDay();
+		 if (hour<10) {
+		    	hour='0'+hour;
+		     }
+		return hour;
+    }
+ }
+ //判断还要多少分钟结束
+ var fitMin=function fitMin(startTime,endTime) {
+    //
+    var start = startTime; //返回当前时间对象
+    var end = endTime; //返回当前时间对象
+    var now=getDate();
+    now=now.getTime();
+    if (now>start) {
+       var num=end-now;
+       var hour= num/1000/60%60;
+       if (hour<1) {
+          return '00';
+       }
+       hour=Math.floor(hour)
+       // var hour=getDate(num);
+       // hour=hour.getHours()+24*hour.getDay();
+      if (hour<10) {
+          hour='0'+hour;
+      }
+      return hour;
+      
+    }else{
+     var num=start-now;
+     var hour= num/1000/60%60;
+      if (hour<1) {
+          return '00';
+       }
+      hour=Math.floor(hour)
+     // var hour=getDate(num);
+     // hour=hour.getHours()+24*hour.getDay();
+     if (hour<10) {
+          hour='0'+hour;
+         }
+    return hour;
+    }
+ }
+ //判断还要多少秒结束
+ var fitSec=function fitSec(startTime,endTime) {
+   //
+    var start = startTime; //返回当前时间对象
+    var end = endTime; //返回当前时间对象
+    var now=getDate();
+    now=now.getTime();
+    if (now>start) {
+       var num=end-now;
+       var hour= (num/1000)%60;
+       if (hour<1) {
+          return '00';
+       }
+       hour=Math.floor(hour)
+       // var hour=getDate(num);
+       // hour=hour.getHours()+24*hour.getDay();
+      if (hour<10) {
+          hour='0'+hour;
+      }
+      return hour;
+      
+    }else{
+     var num=start-now;
+     var hour= (num/1000)%60;
+      if (hour<1) {
+          return '00';
+       }
+      hour=Math.floor(hour)
+     // var hour=getDate(num);
+     // hour=hour.getHours()+24*hour.getDay();
+     if (hour<10) {
+          hour='0'+hour;
+         }
+    return hour;
+    }
+ }
+ var fitRolesArr=function fitRolesArr(str) {
+    var arr=str.split("<br/>");
+     // str=str.replace(/&nbsp;/g, "");
+     return arr ;
+}
+
+var fitRolesStr=function fitRolesStr(str) {
+     str=str.replace("&nbsp;", "");
+     return str;
+}
+//首页盒子标签
+var  fitStringArr=function fitStringArr(str){
+  // return str
+   if (str) {
+    // console.log("*******&&&&&&&&&&")
+    // console.log(str.split(","))
+    return str.split(",");
+   }else{
+    return null
+   }
+}
+//支付价格过滤
+var  fitPayNum=function fitPayNum(str){
+  var num=parseFloat(str)
+   if (num>0) {
+   
+    return num
+   }else{
+    return '0.01'
+   }
+}
+//过滤月份
+var  fitMonth=function fitMonth(str){
+  var num=parseFloat(str)
+  if (num) {
+    num=(num/12).toFixed(1);
+    num=num.toString();
+    num=num.split(".")
+    
+    if (num[1]=='0') {
+      return num[0]
+    }else{
+      return num[0]+'.'+num[1]
+    }
+  }
+}
+
+var fitPhone=function fitPhone(str){
+  // console.log(str)
+  return str.replace(str.substring(3,7), "****")
+
+}
+var fitMinute=function fitMinute(time){
+    //
+    var joinTime = time; 
+    var now=getDate();
+    now=now.getTime();
+    var num=now-joinTime;
+    var hour= num/(1000*60*60);
+    if (hour<1) {
+         if (num<1000*60) {
+            hour=Math.floor(num/(1000*60))+'刚刚办理成功';
+         }else{
+           hour=Math.floor(num/(1000*60))+'分钟前办理成功';
+         }
+        
+    }else{
+       hour=Math.floor(hour)
+        hour=hour+'小时前办理成功';
+    }
+    return hour;    
+  
+}
+var fitPhoneName=function fitPhoneName(str){
+    if (str.length<10) {
+      return str
+    } else{
+     return str.replace(str.substring(5,str.length), "...")
+    }
+  
+}
+module.exports= {
+  fitNum: fitNum,
+  fitTime:fitTime,
+  fitHour:fitHour,
+  fitMin:fitMin,
+  fitSec:fitSec,
+  fitEmpotyArr:fitEmpotyArr,
+  fitRolesArr:fitRolesArr,
+  fitRolesStr:fitRolesStr,
+  fitStringArr:fitStringArr,
+  fitPayNum:fitPayNum,
+  fitMonth:fitMonth,
+  fitPhone:fitPhone,
+  fitMinute:fitMinute,
+  fitPhoneName:fitPhoneName
+};

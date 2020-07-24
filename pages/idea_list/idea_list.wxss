@@ -1,0 +1,7 @@
+.btn-du{
+  width: 143rpx;height: 91rpx;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color:#ffffff;
+}

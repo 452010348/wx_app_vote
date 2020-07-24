@@ -1,0 +1,76 @@
+<!--index.wxml-->
+<!-- 投票创建 -->
+<view class="d-flex d-flex-column h-100">
+	<view class="flex-1 scoll-y p-2"  style="overflow-x: hidden;">
+
+		<view class="p-2 bg-white-0">
+			<view class="m-b-1">投票创建</view>
+			<view class="input flex-1"><input value="{{vote_title}}" bindinput="bindKeyInput_vote_title"  placeholder="投票标题" /></view>
+		</view>
+
+		<view class="p-2 bg-white-0 m-t-2">
+			<view class="m-b-1">投票选项</view>
+			<view class="d-flex">
+				<view class="input flex-1"><input value="{{vote_selection_text}}" bindinput="bindKeyInput_vote_selection_text"  placeholder="请输入投票选项" /></view>
+				<view class="btn-add m-l-1 d-flex flex-center-x flex-center-y" bindtap="bindtap_add_vote_selection">添 加</view>
+			</view>
+			<view class="d-flex flex-center-y m-t-3" wx:for="{{vote_selection}}" wx:key="i" wx:for-index="i" wx:for-item="item">
+				<view class="l-order">{{i+1}}</view>
+				<view class="flex-1 p-x-1">{{item}}</view>
+				<image src="../../image/public/x.png" style="width:40rpx;height:40rpx;" bindtap="bindtap_vote_selection_close" data-i="{{i}}"></image>
+			</view>
+		</view>
+
+		<view class="p-2 bg-white-0 m-t-2">
+			<view class="m-b-1">投票类型</view>
+			<radio-group bindchange="radioChange" class="d-flex flex-between">
+				<label class="d-flex flex-wrap flex-center-y btn-radio">
+					<radio value="0" checked="true" />
+					<view>单选投票</view>
+				</label>
+				<label class="d-flex flex-wrap flex-center-y btn-radio">
+					<radio value="1" />
+					<view>多选投票</view>
+				</label>
+			</radio-group>
+			<view hidden="{{vote_type==0}}" class="input flex-1"><input type="number" value="{{vote_num}}" bindinput="bindinput_vote_num" placeholder="请输入多选个数" /></view>
+		</view>
+
+
+		<view class="p-2 bg-white-0 m-t-2">
+			<view class="m-b-1">高级设置</view>
+			<view class="d-flex flex-center-y m-t-2">
+				<label class="p-r-2 f-s-3">投票时间</label>
+				<view class="input flex-1">
+					<date-time-picker value="{{start_time}}" bindchange="bind_start_time">
+						<view style="font-size:21rpx">{{start_time}}</view>
+					</date-time-picker>
+				</view>
+				<view class="p-x-1">至</view>
+				<view class="input flex-1">
+					<date-time-picker value="{{end_time}}" bindchange="bind_end_time">
+						<view style="font-size:21rpx">{{end_time}}</view>
+					</date-time-picker>
+				</view>
+			</view>
+			<view class="d-flex flex-center-y m-t-2">
+				<label class="p-r-2 f-s-3">日投次数</label>
+				<view class="input flex-1">
+					<view class="w-100 h-100 weui-cell weui-cell_select weui-cell_select-after">
+						<view class="weui-cell__bd">
+							<picker bindchange="bindPicker3Change" range="{{array3}}">
+								<view class="weui-select">{{array3[value3]}}</view>
+							</picker>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+
+	<view class="d-flex flex-center-x p-y-2">
+		<view class="btn-1" bindtap="on_submit">立即创建</view>
+	</view>
+
+</view>

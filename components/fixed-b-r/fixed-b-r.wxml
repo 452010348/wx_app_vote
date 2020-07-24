@@ -1,0 +1,4 @@
+<!--components/fixed-b-r.wxml-->
+	<view class="fixed-b-r d-flex d-flex-column flex-center-x">
+    <slot></slot>
+	</view>

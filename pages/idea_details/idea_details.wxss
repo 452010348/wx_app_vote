@@ -1,0 +1,61 @@
+page{
+  background:#EDF2F6;
+  height: 100%;
+}
+
+
+.before-triangle{
+  position: relative;
+}
+
+.before-triangle::before{
+    content: "";
+    top: 19px;
+    transform: rotate(45deg);
+    position: absolute;
+    z-index: -1;
+    display: inline-block;
+    overflow: hidden;
+    width: 15px;
+    height: 15px;
+    left: -7px;
+    right: initial;
+    background-color: inherit;
+    filter: blur(3px);
+    opacity: 0.3;
+}
+.before-triangle::after {
+  content: "";
+  top: 17px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  z-index: 100;
+  display: inline-block;
+  overflow: hidden;
+  width: 15px;
+  height: 15px;
+  left: -7px;
+  right: initial;
+  background-color: inherit;
+}
+.before-triangle::before{
+  left: auto;
+    right: -7px;
+}
+.before-triangle::after{
+  left: auto;
+  right: -7px;
+}
+
+
+
+.btn-send{
+  background:#3477FC;
+  display: inline-block;
+  border-radius:40rpx;
+  width: 120rpx;height:60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color:#ffffff;
+}

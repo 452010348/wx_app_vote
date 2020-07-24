@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<!-- 意见箱详情 -->
+<view class="d-flex d-flex-column h-100">
+
+  <view class="flex-1 scoll-y" style="overflow-x: hidden;">
+    <view class="bg-white-0 p-3">
+      <view class="d-flex">
+        <image src="../../image/mine/default_head.png" style="width:100rpx;height:100rpx;"></image>
+        <view class="flex-1 p-l-3">先天一炁，简称炁。能够靠自身繁衍与 靠外力炼造，是生命与非生命的区别</view>
+      </view>
+      <view class="m-t-3">
+        描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述
+      </view>
+    </view>
+
+
+    <view class="p-2" wx:for="{{[1,2,3,4,5]}}" wx:key="i" wx:for-index="i" wx:for-item="item">
+      <view class="d-flex">
+        <view class="flex-1 p-2 bg-white-0 before-triangle">管理员回复啊啊啊管理员回复啊啊啊管理员 复啊啊啊管理员回复啊啊啊管理员回复啊啊 管理员回复啊啊啊管理员回复啊啊啊 管理员回复啊</view>
+        <image class="m-l-3 m-t-1" src="../../image/mine/default_head.png"  style="width:70rpx;height:70rpx;"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="p-2">
+    <view class="bg-white-0 p-2">
+      <textarea style="width:100%;height:150rpx;" placeholder="请输入你的意见"></textarea>
+      <view class="text-right">
+        <text class="btn-send">发表</text>
+      </view>
+    </view>
+  </view>
+
+</view>

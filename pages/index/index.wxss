@@ -1,0 +1,26 @@
+.k-box-1 {
+  width: 315rpx;
+  height: 380rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.k-box-1 .title-01 {
+  margin-top: 20rpx;
+  font-size: 50rpx;
+}
+.k-box-1 .btn-01 {
+  margin: 0 auto;
+  width: 280rpx;
+  height: 56rpx;
+  border-radius: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 25rpx;
+}
+.k-box-1 .img-01 {
+  margin: 0 auto;
+  width: 173rpx;
+  height: 173rpx;
+}

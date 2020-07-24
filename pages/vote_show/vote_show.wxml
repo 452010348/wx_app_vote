@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<!-- 投票展示 -->
+<view class="d-flex d-flex-column h-100">
+
+	<view class="text-center f-s-4 " style="color:#3477FC;">技术部周六团建费用重哪里出？</view>
+
+	<view class="flex-1 scoll-y p-2">
+
+		<checkbox-group bindchange="checkboxChange">
+			<label class="weui-cell d-flex p-r-2" wx:for="{{items}}" wx:key="i" wx:for-index="i" wx:for-item="item">
+        <view class="flex-1">{{item.value}}</view>
+				<checkbox value="{{item.name}}" checked="{{item.checked}}"/>
+			</label>
+		</checkbox-group>
+
+	</view>
+
+	<view class="d-flex flex-center-x p-y-4">
+		<view class="btn-1" bindtap="on_sumbit">确认投票</view>
+	</view>
+
+
+	<fixed-b-r>
+		<icon-1 src="/image/public/share.png">分享投票</icon-1>
+	</fixed-b-r>
+
+
+</view>

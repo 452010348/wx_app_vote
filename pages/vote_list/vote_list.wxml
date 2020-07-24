@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<!-- 投票列表 -->
+
+<view class="d-flex d-flex-column h-100">
+  <view class="flex-1 p-x-2 scoll-y"  style="overflow-x: hidden;">
+
+    <view class="d-flex m-t-4" wx:for="{{[1,2]}}" wx:key="i" wx:for-index="i" wx:for-item="item">
+      <image src="../../image/mine/default_head.png" style="width:200rpx;height:200rpx;"></image>
+      <view class="flex-1 p-l-2 d-flex d-flex-column flex-between">
+        <view class="f-s-3 text-ellipsis-2" style="height:90rpx;">先天一炁，简称炁。能够靠自身繁衍与 靠外力炼造，是生命与非生命的区别</view>
+        <view class="d-flex flex-around flex-wrap">
+          <navigator wx:if="{{code=='意见箱'}}" url="../idea_creat/idea_creat?code={{code}}&id=1" class="btn" style="background-image:url(../../image/vote_list/creat.png);">创建</navigator>
+          <navigator wx:if="{{code=='意见箱'}}" url="../idea_details/idea_details?code={{code}}&id=1" class="btn" style="background-image:url(../../image/vote_list/show.png);">查看示例</navigator>
+
+          <navigator wx:if="{{code=='投票'}}" url="../vote_creat/vote_creat?code={{code}}&id=1" class="btn" style="background-image:url(../../image/vote_list/creat.png);">创建</navigator>
+          <navigator wx:if="{{code=='投票'}}" url="../vote_show/vote_show?code={{code}}&id=1" class="btn" style="background-image:url(../../image/vote_list/show.png);">查看示例</navigator>
+
+          <navigator wx:if="{{code=='抽奖'}}" url="../vote_creat/vote_creat?code={{code}}&id=1" class="btn" style="background-image:url(../../image/vote_list/creat.png);">创建</navigator>
+          <navigator wx:if="{{code=='抽奖'}}" url="../vote_show/vote_show?code={{code}}&id=1" class="btn" style="background-image:url(../../image/vote_list/show.png);">查看示例</navigator>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  
+	<view class="d-flex flex-center-x p-y-2">
+		<navigator url="../vote_creat/vote_creat?code={{code}}&id=1" class="btn-1">创建{{code}}</navigator>
+	</view>
+</view>

@@ -1,0 +1,5 @@
+<view class="numCardBox">
+    <block wx:for="{{items}}" wx:key="*this">
+        <text index="{{index}}">{{item}}</text>
+    </block>
+</view>

@@ -1,0 +1,15 @@
+.numCardBox {
+  display: inline-block;
+  line-height: 30rpx;
+}
+.numCardBox text {
+  display: inline-block;
+  margin-right: 2rpx;
+  width: 30rpx;
+  height: 30rpx;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  background: #0081FF;
+  border-radius: 2rpx;
+}

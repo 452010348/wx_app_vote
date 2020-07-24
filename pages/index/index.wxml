@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+
+  <image src="/image/index/banner.png" mode="widthFix" style="width: 750rpx;height:340rpx;"></image>
+
+  <view class="d-flex flex-wrap m-t-4">
+    <template is="boxList" data="{{url:'/pages/vote_list/vote_list?code=投票',color:'#D5A76F',title:'投票',btnText:'投票 单位选优 意见表决',bg:'../../image/index/yellow-bg.png',btn:'../../image/index/yellow-btn.png',icon:'../../image/index/yellow-icon.png'}}" />
+    <template is="boxList" data="{{url:'/pages/vote_list/vote_list?code=意见箱',color:'#4C9B83',title:'意见箱',btnText:'匿名发表，在线反馈',bg:'../../image/index/green-bg.png',btn:'../../image/index/green-btn.png',icon:'../../image/index/green-icon.png'}}" />
+    <template is="boxList" data="{{url:'/pages/vote_list/vote_list?code=抽奖',color:'#CB7B7F',title:'抽奖',btnText:'随机抽取 定制抽取规则',bg:'../../image/index/pink-bg.png',btn:'../../image/index/pink-btn.png',icon:'../../image/index/pink-icon.png'}}" />
+    <template is="boxList" data="{{url:'/pages//',color:'#807C79',title:'更多精彩',btnText:'敬请期待',bg:'../../image/index/gray-bg.png',btn:'../../image/index/gray-btn.png',icon:'../../image/index/gray-icon.png'}}" />
+  </view>
+
+</view>
+
+<template name="boxList">
+  <navigator url="{{url}}" class="k-box-1 m-l-4 m-b-4 text-center" style="background:url({{bg}}) no-repeat 100%">
+    <view class="title-01" style="color:{{color}}">{{title}}</view>
+    <view class="btn-01" style="background:url({{btn}}) no-repeat 100%">{{btnText}}</view>
+    <image class="img-01" src="{{icon}}" ></image>
+  </navigator>
+</template>

@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<!-- 意见箱创建 -->
+<view class="d-flex d-flex-column h-100">
+	<view class="flex-1 scoll-y p-2" style="overflow-x: hidden;">
+
+		<view class="p-2 bg-white-0">
+			<view class="m-b-1">意见箱标题</view>
+			<view class="input flex-1"><input value="{{activity_title}}" bindinput="bind_input_activity_title" placeholder="请设置第一个标题" /></view>
+		</view>
+
+    <view class="p-2 bg-white-0 m-t-2">
+			<view class="m-b-1">意见箱描述</view>
+			<view class="input flex-1" style="height:263rpx;">
+        <textarea value="{{activity_desc}}" bindinput="bind_input_activity_desc" placeholder="请输入多选个数"  style="width:100%;height:100%;" ></textarea>
+      </view>
+		</view>
+
+	</view>
+
+	<view class="d-flex flex-center-x p-y-2">
+		<view class="btn-1" bindtap="on_submit">立即创建</view>
+	</view>
+
+</view>

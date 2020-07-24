@@ -1,0 +1,59 @@
+.btn-1{
+  background-color: #3477FC;
+  text-align: center;
+  line-height:88rpx;
+  color:#fff;
+  width: 80%;
+  border-radius:50rpx 50rpx 50rpx 50rpx;
+}
+.input{
+  background: #EEF3F7;
+  height: 40rpx;
+  padding: 20rpx;
+}
+.input > input{
+  width: 100%;height: 100%;color:#9F9F9F;
+}
+
+
+
+.btn-add{
+  background: #3477FC;
+  padding: 20rpx 40rpx;
+  height: 40rpx;
+  color:#ffffff;
+}
+
+.l-order{
+  font-size:20rpx;
+  background: #FF3334;
+  color:#fff;
+  width: 40rpx;
+  height:40rpx;
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  
+}
+
+.btn-radio{
+  width: 50%;
+  height: 100rpx;
+}
+
+
+.tag-close{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-width: 40rpx;
+  min-height: 40rpx;
+}
+
+
+

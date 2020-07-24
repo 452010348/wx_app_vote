@@ -1,0 +1,56 @@
+{
+  "usingComponents": {
+    "fixed-b-r":"/components/fixed-b-r/fixed-b-r",
+    "icon-1":"/components/icon-1/icon-1",
+    "date-time-picker": "/components/date-time-picker/date-time-picker"
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+
+    "pages/vote_show/vote_show",
+    "pages/vote_creat/vote_creat",
+    "pages/vote_list/vote_list",
+
+    "pages/idea_creat/idea_creat",
+    "pages/idea_details/idea_details",
+    "pages/idea_list/idea_list",
+    
+    "pages/custom_vote/custom_vote",
+    "pages/custom_vote_show/custom_vote_show",
+    
+    "pages/lucky_draw/lucky_draw",
+
+    "pages/my_chanyu/my_chanyu",
+    "pages/my_faqi/my_faqi",
+    "pages/my_dingdan/my_dingdan"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "蜗牛工具箱"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#787170",
+    "selectedColor": "#03a9f4",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "image/mine.png",
+        "selectedIconPath": "image/mine.png",
+        "text": "我的"
+      }
+    ]
+  }
+}
